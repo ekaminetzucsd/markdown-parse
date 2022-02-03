@@ -49,6 +49,6 @@ public class MarkdownParseTest {
 
     @Test
     public void failingTest() {
-	assertEquals(3, 1+1);
+	assertEquals(3, 1+2);
     }
 }
