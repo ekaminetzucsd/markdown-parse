@@ -51,4 +51,11 @@ public class MarkdownParseTest {
     public void failingTest() {
 	assertEquals(3, 1+2);
     }
+
+    @Test
+    public void testMyFile5() throws IOException {
+	String contents = Files.readString(Path.of("test5.md"));
+	List<String> expect = List.of("https://archlinux.org");
+	assertEquals(MarkdownParse.getLinks(contents), expect);
+    }
 }
